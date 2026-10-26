@@ -1,0 +1,40 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #303030;
+    color: #F1E9D8;
+}
+
+a {
+    color: #F1E9D8;
+    text-decoration: none;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    gap: 1rem;
+}
+
+#navbar_name {
+    color: #93A9E2;
+}
+
+.navbar_list {
+    text-decoration: none;
+}
+
