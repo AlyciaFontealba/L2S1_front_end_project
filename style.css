@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Grotesk:wght@300..700&display=swap');
+
 html {
     scroll-behavior: smooth;
 }
@@ -5,11 +9,22 @@ html {
 body {
     background-color: #303030;
     color: #F1E9D8;
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 4rem;
 }
 
 a {
     color: #F1E9D8;
     text-decoration: none;
+}
+
+a:hover {
+    color: #cec5b1;
 }
 
 .navbar {
@@ -18,6 +33,8 @@ a {
     z-index: 1000;
     display: flex;
     align-items: center;
+    background-color: #303030;
+    font-size: 1.2rem;
 }
 
 .navbar_container {
@@ -30,11 +47,39 @@ a {
     gap: 1rem;
 }
 
-#navbar_name {
-    color: #93A9E2;
-}
-
 .navbar_list {
-    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
+.main_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    gap: 5rem;
+}
+
+.left_div, .right_div {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.computer_image {
+    max-width: 80%;
+    height: auto;
+}
+
+
+@media (max-width: 768px) {
+    .main_div {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .computer_image {
+        max-width: 100%;
+    }
+}
