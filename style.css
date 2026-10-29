@@ -1,30 +1,33 @@
 
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Grotesk:wght@300..700&display=swap');
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: #303030;
-    color: #F1E9D8;
+    background-color: #0e0d12;
+    color: #edeae4;
     margin: 0;
     font-family: 'Space Grotesk', sans-serif;
 }
 
+header {
+    border-bottom: #25232c 1px solid;
+}
+
 h1 {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'League Spartan', sans-serif;
     font-size: 4rem;
 }
 
 a {
-    color: #F1E9D8;
+    color: #edeae4;
     text-decoration: none;
 }
 
 a:hover {
-    color: #cec5b1;
+    color: #b7b2bd;
 }
 
 .navbar {
@@ -33,7 +36,7 @@ a:hover {
     z-index: 1000;
     display: flex;
     align-items: center;
-    background-color: #303030;
+    background-color: #0e0d12;
     font-size: 1.2rem;
 }
 
@@ -47,11 +50,27 @@ a:hover {
     gap: 1rem;
 }
 
+.navbar_name {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #abc7ed;
+}
+
+.navbar_name:hover {
+    color: #7095d0;
+}
+
 .navbar_list {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.current_page {
+    border-bottom: 1px solid #abc7ed;
+    padding-bottom: calc(1em - 1px);
 }
 
 .main_div {
@@ -67,11 +86,42 @@ a:hover {
     min-width: 0;
 }
 
-.computer_image {
+img {
     max-width: 80%;
     height: auto;
 }
 
+.components_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 2rem;
+}
+
+.component_item {
+    flex: 1 1 0;
+    min-width: 0;
+    border: 1px solid #2e2b36;
+    border-radius: 1rem;
+    background-color: #17161d;
+}
+
+.component_item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.component_item img {
+    display: block;
+    margin: 0.5rem auto;
+    max-width: 80%;
+    height: auto;
+}
+
+.component_item p {
+    text-align: center;
+}
 
 @media (max-width: 768px) {
     .main_div {

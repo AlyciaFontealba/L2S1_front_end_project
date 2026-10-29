@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title> Accueil </title>
+        <title> Home </title>
         <meta charset="UTF-8">  
         <link rel="stylesheet" href="style.css">
     </head>
@@ -13,15 +13,15 @@
 
                 <nav class="navbar_menu" id="navbar_menu">
                     <ul class="navbar_list">
-                        <li><a href="index.html"> Accueil </a></li>
-                        <li><a href="formulaire.html"> Formulaire </a></li>
+                        <li><a href="index.html" class="current_page"> Home </a></li>
+                        <li><a href="formulaire.html"> Form </a></li>
                     </ul>
                 </nav>
 
                 <div class="navbar_search">
                     <form class="search_form" id="search_form" role="search">
-                        <input class="search_form_input" type="search" placeholder="Chercher...">
-                        <input class="search_form_submit" type="submit" value="Rechercher" />                  
+                        <input class="search_form_input" type="search" placeholder="Search...">
+                        <input class="search_form_submit" type="submit" value="Search" />
                     </form>
                 </div>
             </div>
@@ -40,8 +40,35 @@
             </div>
 
             <div class="components_div">
-                <h2> Components </h2>
-                <p> The main components of a computer are the input/output devices, the central processing unit, and the memory. </p>
+                <div class="component_item">
+                    <img src="images/cpu.png" alt="cpu" class="cpu_image">
+                    <p> CPU </p>
+                </div>
+
+                <div class="component_item">
+                    <img src="images/gpu.png" alt="gpu" class="gpu_image">
+                    <p> GPU </p>
+                </div>
+
+                <div class="component_item">
+                    <img src="images/motherboard.png" alt="motherboard" class="motherboard_image">
+                    <p> Motherboard </p>
+                </div>
+
+                <div class="component_item">
+                    <img src="images/ram.png" alt="ram" class="ram_image">
+                    <p> RAM </p>
+                </div>
+            </div>
         </main>
     </body>
 </html>
+
+
+<!--
+CPU
+<p> The CPU, or central processing unit, is the brains of the whole computer. The CPU's job, its whole job, is fetching instructions from memory and executing them. </p>
+
+
+
+-->
