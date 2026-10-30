@@ -4,9 +4,11 @@
         <title> Home </title>
         <meta charset="UTF-8">  
         <link rel="stylesheet" href="style.css">
+        <script src="accueil.js"></script>
     </head>
 
     <body>
+        <!--  Balise header contenant la barre de navigation du site --> 
         <header class="navbar">
             <div class="navbar_container">
                 <a href="index.html" class="navbar_name" id="navbar_name"> PROJECT </a>
@@ -41,34 +43,56 @@
 
             <div class="components_div">
                 <div class="component_item">
-                    <img src="images/cpu.png" alt="cpu" class="cpu_image">
+                    <img src="images/cpu.png" alt="cpu" class="cpu_image" onclick="component_item_display(cpu)">
                     <p> CPU </p>
                 </div>
 
                 <div class="component_item">
-                    <img src="images/gpu.png" alt="gpu" class="gpu_image">
+                    <img src="images/gpu.png" alt="gpu" class="gpu_image" onclick="component_item_display(gpu)">
                     <p> GPU </p>
                 </div>
 
                 <div class="component_item">
-                    <img src="images/motherboard.png" alt="motherboard" class="motherboard_image">
+                    <img src="images/motherboard.png" alt="motherboard" class="motherboard_image" onclick="component_item_display(motherboard)">
                     <p> Motherboard </p>
                 </div>
 
                 <div class="component_item">
-                    <img src="images/ram.png" alt="ram" class="ram_image">
+                    <img src="images/ram.png" alt="ram" class="ram_image" onclick="component_item_display(ram)">
                     <p> RAM </p>
                 </div>
+            </div>
+
+            <div class="components_description">
+                <p class="component_item_description" id="cpu" hidden> The CPU, or central processing unit, is the brain of the computer. Every time you click a button, open a file, or load a webpage, it carries out the instructions behind that action, working through billions of steps every second.</p>
+                <p class="component_item_description" id="gpu" hidden> The GPU, or graphics processing unit, draws everything you see on the screen, from desktop windows to videos and 3D games. A CPU works on a few tasks at a time, while a GPU can handle thousands of tasks at once, which is exactly what drawing an image needs.</p>
+                <p class="component_item_description" id="motherboard" hidden> The motherboard is the main circuit board inside your computer. Every other part either plugs into it or connects to it, and its job is to hold those parts together and move data and power between them. It also stores the BIOS or UEFI firmware that starts the computer before the operating system loads.</p>
+                <p class="component_item_description" id="ram" hidden> RAM, or random access memory, is the fast short-term memory your computer uses for whatever you are doing right now. When you open a browser, start a game, or edit a document, the data in use is kept in RAM. RAM is volatile, which means everything in it is wiped when the computer turns off.</p>
+            </div>
+
+            <div class="add_description_form">
+                <form action="#" method="post">
+
+                    <!-- Liste déroulante -->
+                    <fieldset>
+                        <legend>Vos modifications</legend>
+
+                        <label for="profil">Quel élément voulez-vous ajouter ?</label><br>
+                        <select id="profil" name="profil">
+                            <option value="">-- Sélectionnez une option --</option>
+                            <option value="titre">Titre</option>
+                            <option value="paragraphe">Paragraphe</option>
+                        </select><br><br>
+
+
+                        <textarea id="message" name="message" rows="5" cols="40" placeholder="Écrivez votre message ici..."></textarea>
+                    </fieldset>
+
+                    <!-- Bouton d’envoi -->
+                    <input type="submit" value="Envoyer le message">
+
+                </form>
             </div>
         </main>
     </body>
 </html>
-
-
-<!--
-CPU
-<p> The CPU, or central processing unit, is the brains of the whole computer. The CPU's job, its whole job, is fetching instructions from memory and executing them. </p>
-
-
-
--->

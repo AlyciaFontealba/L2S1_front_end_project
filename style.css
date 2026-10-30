@@ -1,23 +1,25 @@
 
+/* Import de polices via Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Permet un défilement plus fluide */
 }
 
 body {
+    /* Mise en page de l'ensemble du site*/
     background-color: #0e0d12;
     color: #edeae4;
     margin: 0;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Space Grotesk', sans-serif; /* Police de caractères importée, utilisée par défaut sur le site */
 }
 
 header {
-    border-bottom: #25232c 1px solid;
+    border-bottom: #25232c 1px solid; /* Trait de séparation en bas de l'en-tête */
 }
 
 h1 {
-    font-family: 'League Spartan', sans-serif;
+    font-family: 'League Spartan', sans-serif; /* Police de caractères pour les titres */
     font-size: 4rem;
 }
 
@@ -26,11 +28,11 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:hover { /* Changement de couleur au survol des liens */
     color: #b7b2bd;
 }
 
-.navbar {
+.navbar { /* Style de la barre de navigation qui lui permet de rester visible en haut de la page même au défilement */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -40,7 +42,7 @@ a:hover {
     font-size: 1.2rem;
 }
 
-.navbar_container {
+.navbar_container { 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -123,13 +125,91 @@ img {
     text-align: center;
 }
 
+.components_description {
+    border: 1px solid #2e2b36;
+    border-radius: 1rem;
+    background-color: #17161d;
+    margin: 2rem 4rem;
+}
+
+.components_description p {
+    padding: 1rem 4rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.components_description p[hidden] {
+    display: none;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Regroupement des champs */
+fieldset {
+    border: 1px solid #001854;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* Titre des fieldsets */
+legend {
+    font-weight: bold;
+    color: #001854;
+    padding: 0 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 2px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #001854;
+    border-radius: 15px;
+    background-color: #faf5df;
+    color: #001854;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #edeae4;
+    border-radius: 15px;
+    color: #0e0d12;
+    border: none;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
     .main_div {
         flex-direction: column;
         padding: 2rem;
     }
 
+    .left_div h1 p {
+        text-align: center;
+    }
+
     .computer_image {
-        max-width: 100%;
+        display: block;
+        margin: 0rem auto;
+        max-width: 80%;
+        height: auto;
     }
 }
