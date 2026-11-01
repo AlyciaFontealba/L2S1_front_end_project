@@ -142,43 +142,42 @@ img {
     display: none;
 }
 
-form {
-    max-width: 600px;
+.add_description_form {
+    max-width: 70%;
     margin: 0 auto;
 }
 
 /* Regroupement des champs */
 fieldset {
-    border: 1px solid #001854;
+    border: 1px solid #abc7ed;
     border-radius: 15px;
     padding: 20px;
 }
 
-/* Titre des fieldsets */
 legend {
     font-weight: bold;
-    color: #001854;
-    padding: 0 10px;
+    color: #edeae4;
+    padding: 0 0.5rem;
 }
 
 label {
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="number"],
+.placeholder {
+    color: #4c4955;
+}
+
 select,
 textarea {
     width: 100%;
     padding: 2px;
     margin-top: 5px;
     margin-bottom: 15px;
-    border: 1px solid #001854;
+    border: 1px solid #2e2b36;
     border-radius: 15px;
-    background-color: #faf5df;
-    color: #001854;
-    font-family: Arial, sans-serif;
+    background-color: #17161d;
+    color: #edeae4;
 }
 
 textarea {
@@ -186,12 +185,12 @@ textarea {
 }
 
 input[type="submit"] {
-    background-color: #edeae4;
-    border-radius: 15px;
+    background-color: #abc7ed;
+    border-radius: 1rem;
     color: #0e0d12;
-    border: none;
-    margin-top: 10px;
-    padding: 10px 20px;
+    border: 1px solid #0e0d12;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
     font-weight: bold;
     cursor: pointer;
 }

@@ -71,26 +71,40 @@
             </div>
 
             <div class="add_description_form">
-                <form action="#" method="post">
+                <form action="#" method="post" class="add_description_form">
 
-                    <!-- Liste déroulante -->
                     <fieldset>
-                        <legend>Vos modifications</legend>
+                        <legend>Your changes</legend>
 
-                        <label for="profil">Quel élément voulez-vous ajouter ?</label><br>
-                        <select id="profil" name="profil">
-                            <option value="">-- Sélectionnez une option --</option>
-                            <option value="titre">Titre</option>
-                            <option value="paragraphe">Paragraphe</option>
+                        <label for="element_form">What element do you want to add?</label><br>
+                        <select id="element_form" name="element_form">
+                            <option value="" class="placeholder">-- Select an element --</option>
+                            <option value="title">Title</option>
+                            <option value="paragraph">Paragraph</option>
                         </select><br><br>
 
+                        <label for="component_form">On which component do you want to add it?</label><br>
+                        <select id="component_form" name="component_form">
+                            <option value="" class="placeholder"> -- Select a component --</option>
+                            <option value="cpu"> CPU</option>
+                            <option value="gpu"> GPU</option>
+                            <option value="motherboard"> Motherboard</option>
+                            <option value="ram"> RAM</option>
+                        </select><br><br>
 
-                        <textarea id="message" name="message" rows="5" cols="40" placeholder="Écrivez votre message ici..."></textarea>
+                        <label for="color_form">In which color</label><br>
+                        <select id="color_form" name="color_form">
+                            <option value="" class="placeholder">-- Select a color --</option>
+                            <option value="red"> Red</option>
+                            <option value="blue"> Blue</option>
+                            <option value="green"> Green</option>
+                            <option value="yellow"> Yellow</option>
+                        </select><br><br>
+
+                        <textarea id="message" name="message" rows="5" cols="40" placeholder="Write your message here..."></textarea>
                     </fieldset>
 
-                    <!-- Bouton d’envoi -->
-                    <input type="submit" value="Envoyer le message">
-
+                    <input type="submit" value="Send the message">
                 </form>
             </div>
         </main>
