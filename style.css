@@ -132,19 +132,19 @@ img {
     margin: 2rem 4rem;
 }
 
-.components_description p {
+.components_description h3, p {
     padding: 1rem 4rem;
     font-size: 1.2rem;
     text-align: center;
 }
 
-.components_description p[hidden] {
+.components_description div[hidden] {
     display: none;
 }
 
 .add_description_form {
     max-width: 70%;
-    margin: 0 auto;
+    margin: 2rem auto;
 }
 
 /* Regroupement des champs */

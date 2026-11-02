@@ -4,7 +4,7 @@
         <title> Home </title>
         <meta charset="UTF-8">  
         <link rel="stylesheet" href="style.css">
-        <script src="accueil.js"></script>
+        <script src="accueil.js" defer></script>
     </head>
 
     <body>
@@ -33,7 +33,7 @@
             <div class="main_div">
                 <div class="left_div">
                     <h1> INSIDE YOUR COMPUTER </h1>
-                    <p> How does a computer work ? The critical components of a computer are the peripherals, the input/output subsystem, and the central processing unit, as well as human-written programs and memory. </p>
+                    <h2> How does a computer work ? The critical components of a computer are the peripherals, the input/output subsystem, and the central processing unit, as well as human-written programs and memory. </h2>
                 </div>
 
                 <div class="right_div">
@@ -42,36 +42,50 @@
             </div>
 
             <div class="components_div">
-                <div class="component_item">
-                    <img src="images/cpu.png" alt="cpu" class="cpu_image" onclick="component_item_display(cpu)">
+                <div class="component_item" onclick="component_item_display('cpu')">
+                    <img src="images/cpu.png" alt="cpu" class="cpu_image">
                     <p> CPU </p>
                 </div>
 
-                <div class="component_item">
-                    <img src="images/gpu.png" alt="gpu" class="gpu_image" onclick="component_item_display(gpu)">
+                <div class="component_item" onclick="component_item_display('gpu')">
+                    <img src="images/gpu.png" alt="gpu" class="gpu_image">
                     <p> GPU </p>
                 </div>
 
-                <div class="component_item">
-                    <img src="images/motherboard.png" alt="motherboard" class="motherboard_image" onclick="component_item_display(motherboard)">
+                <div class="component_item" onclick="component_item_display('motherboard')">
+                    <img src="images/motherboard.png" alt="motherboard" class="motherboard_image">
                     <p> Motherboard </p>
                 </div>
 
-                <div class="component_item">
-                    <img src="images/ram.png" alt="ram" class="ram_image" onclick="component_item_display(ram)">
+                <div class="component_item" onclick="component_item_display('ram')">
+                    <img src="images/ram.png" alt="ram" class="ram_image" >
                     <p> RAM </p>
                 </div>
             </div>
 
             <div class="components_description">
-                <p class="component_item_description" id="cpu" hidden> The CPU, or central processing unit, is the brain of the computer. Every time you click a button, open a file, or load a webpage, it carries out the instructions behind that action, working through billions of steps every second.</p>
-                <p class="component_item_description" id="gpu" hidden> The GPU, or graphics processing unit, draws everything you see on the screen, from desktop windows to videos and 3D games. A CPU works on a few tasks at a time, while a GPU can handle thousands of tasks at once, which is exactly what drawing an image needs.</p>
-                <p class="component_item_description" id="motherboard" hidden> The motherboard is the main circuit board inside your computer. Every other part either plugs into it or connects to it, and its job is to hold those parts together and move data and power between them. It also stores the BIOS or UEFI firmware that starts the computer before the operating system loads.</p>
-                <p class="component_item_description" id="ram" hidden> RAM, or random access memory, is the fast short-term memory your computer uses for whatever you are doing right now. When you open a browser, start a game, or edit a document, the data in use is kept in RAM. RAM is volatile, which means everything in it is wiped when the computer turns off.</p>
+                <div class="component_item_description" id="cpu" hidden>
+                    <h3>The CPU</h3>
+                    <p> The CPU, or central processing unit, is the brain of the computer. Every time you click a button, open a file, or load a webpage, it carries out the instructions behind that action, working through billions of steps every second.</p>
+                </div>
+
+                <div class="component_item_description" id="gpu" hidden>
+                    <h3>The GPU</h3>
+                    <p> The GPU, or graphics processing unit, draws everything you see on the screen, from desktop windows to videos and 3D games. A CPU works on a few tasks at a time, while a GPU can handle thousands of tasks at once, which is exactly what drawing an image needs.</p>
+                </div>
+                <div class="component_item_description" id="motherboard" hidden>
+                    <h3>The Motherboard</h3>
+                    <p> The motherboard is the main circuit board inside your computer. Every other part either plugs into it or connects to it, and its job is to hold those parts together and move data and power between them. It also stores the BIOS or UEFI firmware that starts the computer before the operating system loads.</p>
+                </div>
+
+                <div class="component_item_description" id="ram" hidden>
+                    <h3>The RAM</h3>
+                    <p> RAM, or random access memory, is the fast short-term memory your computer uses for whatever you are doing right now. When you open a browser, start a game, or edit a document, the data in use is kept in RAM. RAM is volatile, which means everything in it is wiped when the computer turns off.</p>
+                </div>
             </div>
 
             <div class="add_description_form">
-                <form action="#" method="post" class="add_description_form">
+                <form action="#" class="add_description_form" onsubmit="add_description(event)">
 
                     <fieldset>
                         <legend>Your changes</legend>
@@ -79,8 +93,8 @@
                         <label for="element_form">What element do you want to add?</label><br>
                         <select id="element_form" name="element_form">
                             <option value="" class="placeholder">-- Select an element --</option>
-                            <option value="title">Title</option>
-                            <option value="paragraph">Paragraph</option>
+                            <option value="h3">Title</option>
+                            <option value="p">Paragraph</option>
                         </select><br><br>
 
                         <label for="component_form">On which component do you want to add it?</label><br>
@@ -95,16 +109,16 @@
                         <label for="color_form">In which color</label><br>
                         <select id="color_form" name="color_form">
                             <option value="" class="placeholder">-- Select a color --</option>
-                            <option value="red"> Red</option>
-                            <option value="blue"> Blue</option>
-                            <option value="green"> Green</option>
-                            <option value="yellow"> Yellow</option>
+                            <option value="#edabab"> Red</option>
+                            <option value="#abc7ed"> Blue</option>
+                            <option value="#b3edab"> Green</option>
+                            <option value="#ede9ab"> Yellow</option>
                         </select><br><br>
 
                         <textarea id="message" name="message" rows="5" cols="40" placeholder="Write your message here..."></textarea>
                     </fieldset>
 
-                    <input type="submit" value="Send the message">
+                    <input type="submit" value="Add the modifications">
                 </form>
             </div>
         </main>
