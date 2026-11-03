@@ -11,7 +11,7 @@
         <!--  Balise header contenant la barre de navigation du site --> 
         <header class="navbar">
             <div class="navbar_container">
-                <a href="index.html" class="navbar_name" id="navbar_name"> PROJECT </a>
+                <a href="index.html" class="navbar_name" id="navbar_name"> JSPROJECT </a>
 
                 <nav class="navbar_menu" id="navbar_menu">
                     <ul class="navbar_list">
@@ -22,8 +22,8 @@
 
                 <div class="navbar_search">
                     <form class="search_form" id="search_form" role="search">
-                        <input class="search_form_input" type="search" placeholder="Search...">
-                        <input class="search_form_submit" type="submit" value="Search" />
+                        <input class="search_form_input" type="search" placeholder="Search..." id="search_input">
+                        <input class="search_form_submit" type="submit" value="Search" onclick="searching_bar()"/>
                     </form>
                 </div>
             </div>
@@ -115,7 +115,15 @@
                             <option value="#ede9ab"> Yellow</option>
                         </select><br><br>
 
-                        <textarea id="message" name="message" rows="5" cols="40" placeholder="Write your message here..."></textarea>
+                        <label for="option_form">Other options</label><br>
+                        <select id="option_form" name="option_form">
+                            <option value="" class="placeholder">-- Select an option --</option>
+                            <option value="font-weight: bold"> Bold </option>
+                            <option value="font-style: italic"> Italic </option>
+                            <option value="text-decoration: underline"> Underline </option>
+                        </select><br><br>
+
+                        <textarea id="message" name="message" rows="5" cols="40" placeholder="Write your text here..."></textarea>
                     </fieldset>
 
                     <input type="submit" value="Add the modifications">

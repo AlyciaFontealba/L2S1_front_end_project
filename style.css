@@ -70,6 +70,14 @@ a:hover { /* Changement de couleur au survol des liens */
     gap: 1rem;
 }
 
+input[type="search"] {
+    padding: 0.5rem;
+    border: 1px solid #2e2b36;
+    border-radius: 1.5rem;
+    background-color: #17161d;
+    color: #edeae4;
+}
+
 .current_page {
     border-bottom: 1px solid #abc7ed;
     padding-bottom: calc(1em - 1px);
@@ -171,13 +179,17 @@ label {
 select,
 textarea {
     width: 100%;
-    padding: 2px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
     border: 1px solid #2e2b36;
-    border-radius: 15px;
+    border-radius: 1.5rem;
     background-color: #17161d;
     color: #edeae4;
+}
+
+select {
+    cursor: pointer;
 }
 
 textarea {
@@ -185,14 +197,19 @@ textarea {
 }
 
 input[type="submit"] {
-    background-color: #abc7ed;
+    background-color: #2e2b36;
     border-radius: 1rem;
-    color: #0e0d12;
-    border: 1px solid #0e0d12;
+    color: #edeae4;
+    border: 1px solid #2e2b36;
     margin-top: 0.5rem;
     padding: 0.5rem 1rem;
     font-weight: bold;
     cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #484550;
+    border: 1px solid #484550;
 }
 
 @media (max-width: 768px) {
