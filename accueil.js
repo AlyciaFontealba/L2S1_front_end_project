@@ -1,18 +1,10 @@
 
 function searching_bar() {
-    const searchInput = document.getElementById("search_input");
-    const searchValue = searchInput.value.toLowerCase();
-    const textPage = document.querySelectorAll("h1, h2, h3, p, li, a");
-
-    for (let i = 0; i < textPage.length; i++) {
-        const textPageContent = textPage[i].textContent.toLowerCase();
-        var cpt = 0;
-
-        if (textPageContent.includes(searchValue)) {
-            textPage[i].style.backgroundColor = "yellow";
-            cpt += 1;
-        }
-    }
+    const searchValue = document.getElementById("search_input").value.toLowerCase();
+    const textPage = document.querySelectorAll("h1, h2, h3, p, li, a").textContent.toLowerCase();
+    const textPageArray = textPage.split(" ");
+    const result = textPageArray.filter(word => word == searchValue);    
+    const cpt = result.length;
 
     console.log("Number of occurrences found: " + cpt);
     
