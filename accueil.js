@@ -1,25 +1,4 @@
 
-function searching_bar() {
-    const textPage = document.querySelector("main").innerText.toLowerCase();
-    const searchValue = document.getElementById("search_input").value.toLowerCase();
-    const searchResult = document.getElementById("search_result");
-    let word = "";
-    let count = 0;
-
-    for (let i = 0; i <= textPage.length; i++) {
-        if (i === textPage.length || textPage[i] === " " || textPage[i] === "\n" || textPage[i] === "\t") {
-            if (word === searchValue && word !== "") {
-                count++;
-            }
-            word = "";
-        } else {
-            word += textPage[i];
-        }
-    }
-
-    searchResult.textContent = "Number of occurrences found: " + count;
-}
-
 function component_item_display(componentId) {
     const componentDescriptions = document.querySelectorAll(".components_description div");
 
